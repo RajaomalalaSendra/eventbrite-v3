@@ -10,7 +10,7 @@
     <p>  Duration: <%=Event.find(@attend.event_id).duration%></p>
     <p>
       Attendant: <%=User.find(@attend.user_id).last_name%></p>
-    <p>Maintenant tu a un nouveau événement via : <%= @url %>.
+    <p>Maintenant tu a un nouveau événement via : <%= @url_for %>.
     </p>
     <p> À très vite sur zanfoana.com !</p>
 
