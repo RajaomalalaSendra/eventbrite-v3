@@ -1,7 +1,7 @@
-Salut <%= @user.last_name %> <%= @user.first_name %> et bienvenue chez nous !
+Salut <%=User.find(@attend.user_id).last_name%> et bienvenue chez nous !
 ==========================================================
  
-Un événement pour toi dans zanfoana.com en utilisant l'e-mail suivant : <%= @user.email %>.
+Un événement pour toi dans zanfoana.com en utilisant l'e-mail suivant : <%=Event.find(@attend.event_id).title%>.
  
 Pour accéder à ton espace cet événement, connecte-toi via : <%= @url %>.
  
