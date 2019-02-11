@@ -7,6 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 2.times do |i|
 	User.create(email: "email#{i}@email.email", first_name: "User#{i}", last_name: "Last Name#{i}", description: "Description#{i} blablabla", encrypted_password: "encrypted_password_number#{i}")
-	Event.create(start_date: "12122019", duration: "#{30}", title: "Title#{i} title#{i} of event#{i}", description: "description#{i} of the event#{i}", price: "#{i}", location: "location#{i}")
-	Attendance.create(stripe_customer_id: "stripe user id#{i}", user_id: "#{i}", event_id: "#{i}")
+	Event.create(start_date: "12/12/2019", duration: 30, title: "Title#{i} title#{i} of event#{i}", description: "description#{i} of the event#{i}", price: 10, location: "location#{i}", user_id: i.to_i + 1)
+	Attendance.create(stripe_customer_id: "stripe user id#{i}", user_id: i.to_i + 1, event_id: i.to_i + 1)
 end
