@@ -5,15 +5,14 @@
   </head>
   <body>
     <p>
-      New Event: <%=Event.find(@attend.event_id).title%>
-      Date: <%=Event.find(@attend.event_id).start_date%>
-      Duration: <%=Event.find(@attend.event_id).duration%>
-    </p>
+      New Event: <%=Event.find(@attend.event_id).title%> </p>
+    <p> Date: <%=Event.find(@attend.event_id).start_date%> </p>
+    <p>  Duration: <%=Event.find(@attend.event_id).duration%></p>
     <p>
-      Name: <%=User.find(@attend.user_id).last_name%>
-      Maintenant tu a un nouveau événement via : <%= @url %>.
+      Attendant: <%=User.find(@attend.user_id).last_name%></p>
+    <p>Maintenant tu a un nouveau événement via : <%= @url %>.
     </p>
-    <p> À très vite sur zanfoana.com !
+    <p> À très vite sur zanfoana.com !</p>
 
 
   </body>
