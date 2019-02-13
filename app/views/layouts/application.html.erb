@@ -10,6 +10,67 @@
   </head>
 
   <body>
+    <header>
+      <div class="shadow p-1 mb-5 bg-success rounded">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <a class="navbar-brand" href="/">EVENTBRITE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+            <div class="dropdown show">
+                <button class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  new
+                </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="/events/new">New Event</a>
+                <a class="dropdown-item" href="/registration/new">Registration</a>
+              </div>
+            </div>
+            </li>
+            <li class="nav-item">
+              <div class="dropdown show">
+                <button class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Profil
+                </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="/user/show">My Profil</a>
+                <a class="dropdown-item" href="/users/sign_out">Deconnect</a>
+              </div>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/events/new">New Events</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/users/show" >My Profil</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/users/sign_in">Sign in</a>
+            </li>
+             <li class="nav-item active">
+              <%= link_to "Sign Out", "/users/sign_out", :class => "nav-link" %>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+    </div>
+    </header>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
     <%= yield %>
+    <script type="text/javascript" src="https://bootswatch.com/_vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://bootswatch.com/_vendor/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="https://bootswatch.com/_vendor/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
 </html>
