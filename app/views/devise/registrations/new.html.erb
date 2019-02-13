@@ -5,15 +5,6 @@
       <h2>Sign up</h2>
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= render "devise/shared/error_messages", resource: resource %>
-        <div class="field">
-          <label for="inputEmail1">Email address</label>
-          <input type="email" class="form-control" placeholder="Enter email" name="email">
-          <small class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-        <div class="field">
-          <label for="inputPassword">Password</label>
-          <input type="email" class="form-control" placeholder="Enter email" name="email">
-          <small class="form-text text-muted">We'll never share your email with anyone else.</small>
           <%= f.label :password %>
           <% if @minimum_password_length %>
           <em>(<%= @minimum_password_length %> characters minimum)</em>

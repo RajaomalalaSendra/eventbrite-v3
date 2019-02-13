@@ -24,26 +24,6 @@
               <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-            <div class="dropdown show">
-                <button class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  new
-                </a>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="/events/new">New Event</a>
-                <a class="dropdown-item" href="/registration/new">Registration</a>
-              </div>
-            </div>
-            </li>
-            <li class="nav-item">
-              <div class="dropdown show">
-                <button class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Profil
-                </a>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="/user/show">My Profil</a>
-                <a class="dropdown-item" href="/users/sign_out">Deconnect</a>
-              </div>
-            </li>
             <%if !current_user %>
             <li class="nav-item active">
               <a class="nav-link" href="/users/sign_in">Sign in</a>
@@ -71,7 +51,29 @@
     </header>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-
+    <div class="container">
+    <!--The jubmbotron-->
+    <%if !current_user %>
+    <div class="jumbotron">
+      <div class="shadow">
+      <h1 class="display-3">WELCOME TO THE WEBSITE EVENTBRITE</h1>
+      <p class="lead">This is  is the website that we can create a simple event. If you want to create an event for other people here and from about Please subscribe.</p>
+      <hr class="my-4">
+      <p>I am sure that you will get more advantages of it</p>
+    </div>
+    </div>
+    <%else%>
+    <div class="jumbotron">
+    <h1 class="display-3">Hello, world!</h1>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      </p>
+    </div>
+    <%end%>
+  </div>
     <%= yield %>
     <script type="text/javascript" src="https://bootswatch.com/_vendor/popper.js/dist/umd/popper.min.js"></script>
     <script type="text/javascript" src="https://bootswatch.com/_vendor/jquery/dist/jquery.min.js"></script>
