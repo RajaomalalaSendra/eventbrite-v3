@@ -17,6 +17,7 @@ class EventsController < ApplicationController
   	redirect_to "/"
   end
   def show
+    @event = Event.find(params[:id])
   end
 
 end
