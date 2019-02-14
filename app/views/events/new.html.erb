@@ -1,12 +1,18 @@
 <div class="container">
+	<%if @event.errors.any?%>
+	There is some error here:
+		<%@event.errors.full_messages.each do |message|%>
+			<li><%=message%></li>	
+		<%end%>
+	<%end%>
   <div class="row">
     <div class="col-md-6 offset-md-3">
       <div class="shadow p-3 mb-5 bg-white rounded">
       <h2>New Event</h2>
-      <%= form_tag url_for(action: "create"), method: "post", :class => "form-group", :placehoder => "ex: 02/19/2019"%>
+      <%= form_tag url_for(action: "create"), method: "post", :class => "form-group"%>
         <div class="field">
           <%= label_tag :"Start Date" %><br />
-          <%= date_field_tag :start_date, nil, :class => 'form-control' %>
+          <%= datetime_field_tag :start_date, nil, :class => 'form-control', :placehoder => "ex: 02/19/2019" %>
         </div>
 
         <div class="field">
@@ -15,7 +21,7 @@
         </div>
         <div class="field">
           <%= label_tag :Description %><br />
-          <%= text_field_tag :description, nil, :class => 'form-control', :placeholder => "the description" %>
+          <%= text_area_tag :description, nil, :class => 'form-control', :placeholder => "the description" %>
         </div>
         <div class="field">
           <%= label_tag :title %><br />
