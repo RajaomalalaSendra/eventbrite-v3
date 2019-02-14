@@ -8,10 +8,13 @@
     </div>
     <%else %>
     <div class="jumbotron">
-        <h1 class="display-3">WELCOME USER</h1>
+        <h1 class="display-3">WELCOME <%=current_user.first_name%></h1>
         <p class="lead">This is  is the website that we can create a simple event. If you want to create an event  for other people here You can create it now.</p>
         <hr class="my-4">
         <p>I am sure that you will get more advantages of it</p>
     </div>
+	    <%Event.all.each do |event|%>
+	    	<li><%=event.title%></li>
+	    <%end%>
     <%end%>
   </div>

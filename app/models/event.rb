@@ -12,11 +12,11 @@ class Event < ApplicationRecord
   
   def create_event
   	event = Event.new()
-  	if params[:start_date] < Time.now
+  	if :start_date < Date.now
   	  errors.add("Erreur, pas possible de modifier ou créer cet évenement")
-  	elsif params[:duration] % 5 != 0 || params[:duration] < 0
+  	elsif :duration % 5 != 0 || :duration < 0
   	  errors.add("Erreur, pas possible de créer un événement non divisible à 5")
-  	elsif params[:price] == 0
+  	elsif :price == 0
   	  errors.add("Erreur, pas d'événement gratuit pour le moment")
   	else 
       event.create?
