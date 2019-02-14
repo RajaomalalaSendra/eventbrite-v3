@@ -5,9 +5,10 @@ class EventsController < ApplicationController
   	@event = Event.new
   end
   def create
-  	@event = Event.new
-  	@event.save()
-  	redirect to "/"
+  	puts "aaaaaaaaaaaaaaaaaaaaa"
+  	#@event = Event.new
+  	#@event.save()
+  	redirect_to "/"
   end
   def show
   end

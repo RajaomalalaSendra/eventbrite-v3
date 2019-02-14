@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   end
   def create
   	@user = User.new
-  	@user.create(firt_name: params[:first_name], last_name: params[:last_name], description: params[:description], email: params[:email], password: params[:password] )
+  	@user.save(firt_name: params[:first_name], last_name: params[:last_name], description: params[:description], email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation])
   	redirect_to root_path
   end
   def show
